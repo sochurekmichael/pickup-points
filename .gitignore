@@ -1,0 +1,51 @@
+# Intellij IDEA
+.idea/*
+*.iml
+
+# Apple
+
+*.DS_Store
+
+/data/
+
+# CSS files for BEE 3.0
+!/public/css/bee/normalize.css
+
+# nvm files
+*.nvmrc
+!.nvmrc
+
+/var
+/vendor
+
+# Jenkins build
+/build/output
+/build/release
+/.version
+
+/temp/*
+!/temp/.gitkeep
+!/temp/logs
+/temp/logs/*
+!/temp/logs/.gitkeep
+
+# blocking adminer.php from adding to repo
+adminer.php
+
+.phpunit.result.cache
+/composer.phar
+
+# phpstan
+phpstan.neon
+
+# phpstan error breakdown
+phpstan-baseline-breakdown.yaml
+
+# Generated in some GHAs
+/auth.json
+
+# coverage for sonar cube
+coverage.xml
+
+# merged test report for sonar cube
+test-report.xml
