@@ -20,6 +20,12 @@ services:
     volumes:
       - .:/var/www/html
       - ./data/apache/logs:/var/log/apache2
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: ${MYSQL_PORT:-3306}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dev}
+      MYSQL_USERNAME: ${MYSQL_USERNAME:-root}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-root}
 
   mysql:
     image: mysql:8.0

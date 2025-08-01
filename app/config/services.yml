@@ -7,3 +7,11 @@ services:
   App\:
     resource: '../../src/*'
     exclude: '../../src/{*Test}'
+
+  PDO:
+    class: PDO
+    factory: [ '@App\Database\DatabaseConnectionFactory', 'create' ]
+    arguments:
+      $dsn: 'mysql:host=pickupPoints.mysql;dbname=%env(resolve:MYSQL_DATABASE)%'
+      $username: '%env(resolve:MYSQL_USERNAME)%'
+      $password: '%env(resolve:MYSQL_PASSWORD)%'
