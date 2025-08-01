@@ -21,6 +21,7 @@ services:
       - .:/var/www/html
       - ./data/apache/logs:/var/log/apache2
     environment:
+      ENV: development
       MYSQL_HOST: mysql
       MYSQL_PORT: ${MYSQL_PORT:-3306}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-dev}

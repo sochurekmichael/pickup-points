@@ -15,3 +15,8 @@ services:
       $dsn: 'mysql:host=pickupPoints.mysql;dbname=%env(resolve:MYSQL_DATABASE)%'
       $username: '%env(resolve:MYSQL_USERNAME)%'
       $password: '%env(resolve:MYSQL_PASSWORD)%'
+
+  App\Command\PhinxMigrationCommand:
+    arguments:
+      $environment: '%env(resolve:ENV)%'
+      $database: '%env(resolve:MYSQL_DATABASE)%'
