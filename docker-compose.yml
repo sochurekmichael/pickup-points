@@ -1,0 +1,55 @@
+version: "3.9"
+
+networks:
+  pickup-points:
+    driver: bridge
+
+services:
+  php:
+    build: './build/php'
+    restart: unless-stopped
+    container_name: pickupPoints.php
+    tty: true
+    depends_on:
+      - mysql
+    networks:
+      - pickup-points
+    ports:
+      - "8081:80"
+      - "443:443"
+    volumes:
+      - .:/var/www/html
+      - ./data/apache/logs:/var/log/apache2
+
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    container_name: pickupPoints.mysql
+    tty: true
+    ports:
+      - "3306:3306"
+    networks:
+      - pickup-points
+    volumes:
+      - "./build/mysql/my.cnf:/etc/mysql/conf.d/custom.cnf:ro"
+      - "./data/mysql/dbdata:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dev}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-root}
+
+  adminer:
+    image: adminer
+    container_name: pickupPoints.adminer
+    tty: true
+    depends_on:
+      - mysql
+      - php
+    ports:
+      - "8080:8080"
+    networks:
+      - pickup-points
+    environment:
+      PMA_HOST: mysql
+      PMA_ARBITRARY: 1
+      PMA_PORT: 3306
