@@ -20,3 +20,15 @@ services:
     arguments:
       $environment: '%env(resolve:ENV)%'
       $database: '%env(resolve:MYSQL_DATABASE)%'
+
+  App\Import\ImporterService:
+    arguments:
+      $importers:
+        - '@App\Import\BalikovnaImporter'
+
+  App\Import\BalikovnaImporter:
+    arguments:
+      $externalIdResolver: '@App\Import\Resolver\ExternalIdResolver'
+      $pickupPointTypeResolver: '@App\Import\Resolver\Type\BalikovnaTypeResolver'
+      $pickupPointStatusResolver: '@App\Import\Resolver\Status\BalikovnaStatusResolver'
+      $pickupPointOpeningHoursResolver: '@App\Import\Resolver\OpeningHours\BalikovnaOpeningHoursResolver'
