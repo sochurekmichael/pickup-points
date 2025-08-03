@@ -6,7 +6,8 @@ services:
 
   App\:
     resource: '../../src/*'
-    exclude: '../../src/{*Test}'
+    exclude:
+      - '../src/**/*Test.php'
 
   PDO:
     class: PDO
@@ -28,6 +29,7 @@ services:
 
   App\Import\BalikovnaImporter:
     arguments:
+      $xmlReaderProvider: '@App\Import\Reader\Xml\DefaultXmlReaderProvider'
       $externalIdResolver: '@App\Import\Resolver\ExternalIdResolver'
       $pickupPointTypeResolver: '@App\Import\Resolver\Type\BalikovnaTypeResolver'
       $pickupPointStatusResolver: '@App\Import\Resolver\Status\BalikovnaStatusResolver'
