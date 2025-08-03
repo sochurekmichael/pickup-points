@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zv xmlns="http://www.cpost.cz/schema/aict/zv_2" xmlns:xsi="http://www.cpost.cz/schema/aict/zv_2" xsi:schemaLocation="http://www.cpost.cz/schema/aict/zv_2">
+    <generated>2025-08-02T17:52:09</generated>
+    <row>
+        <PSC>10000</PSC>
+        <NAZEV>Praha 10</NAZEV>
+        <ADRESA>Černokostelecká 2020/20, Strašnice, 10000, Praha 10</ADRESA>
+        <TYP>pošta</TYP>
+        <OTEV_DOBY>
+            <den name="Pondělí">
+                <od_do>
+                    <od>08:00</od>
+                    <do>19:30</do>
+                </od_do>
+            </den>
+            <den name="Úterý">
+                <od_do>
+                    <od>08:00</od>
+                    <do>19:30</do>
+                </od_do>
+            </den>
+            <den name="Středa">
+                <od_do>
+                    <od>08:00</od>
+                    <do>19:30</do>
+                </od_do>
+            </den>
+            <den name="Čtvrtek">
+                <od_do>
+                    <od>08:00</od>
+                    <do>19:30</do>
+                </od_do>
+            </den>
+            <den name="Pátek">
+                <od_do>
+                    <od>08:00</od>
+                    <do>19:30</do>
+                </od_do>
+            </den>
+            <den name="Sobota">
+                <od_do>
+                    <od>08:00</od>
+                    <do>12:00</do>
+                </od_do>
+            </den>
+            <den name="Neděle"/>
+        </OTEV_DOBY>
+        <SOUR_X>1044922.91</SOUR_X>
+        <SOUR_Y>737904.98</SOUR_Y>
+        <OBEC>Praha</OBEC>
+        <C_OBCE>Strašnice</C_OBCE>
+        <SOUR_X_WGS84>14.492777</SOUR_X_WGS84>
+        <SOUR_Y_WGS84>50.076442</SOUR_Y_WGS84>
+        <STAV/>
+        <POPIS/>
+        <PRIJEM_NR>A</PRIJEM_NR>
+        <TISK_STITKU>N</TISK_STITKU>
+        <BOX_PROVIDER/>
+        <PLATBA_KARTOU>A</PLATBA_KARTOU>
+    </row>
+    <row>
+        <PSC>10002</PSC>
+        <NAZEV>Praha 10 SAZKA Žabka Kodaňská</NAZEV>
+        <ADRESA>Kodaňská 485/63, Vršovice, 10100, Praha 10</ADRESA>
+        <TYP>balíkovna partner</TYP>
+        <OTEV_DOBY>
+            <den name="Pondělí">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Úterý">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Středa">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Čtvrtek">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Pátek">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Sobota">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+            <den name="Neděle">
+                <od_do>
+                    <od>06:00</od>
+                    <do>23:00</do>
+                </od_do>
+            </den>
+        </OTEV_DOBY>
+        <SOUR_X>1045227</SOUR_X>
+        <SOUR_Y>740305</SOUR_Y>
+        <OBEC>Praha</OBEC>
+        <C_OBCE>Vršovice</C_OBCE>
+        <SOUR_X_WGS84>14.460133</SOUR_X_WGS84>
+        <SOUR_Y_WGS84>50.070808</SOUR_Y_WGS84>
+        <STAV>často vytížená</STAV>
+        <POPIS>přízemí</POPIS>
+        <PRIJEM_NR>A</PRIJEM_NR>
+        <TISK_STITKU>A</TISK_STITKU>
+        <BOX_PROVIDER/>
+        <PLATBA_KARTOU>N</PLATBA_KARTOU>
+    </row>
+</zv>
